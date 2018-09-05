@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="
+	   		http://www.springframework.org/schema/beans
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sandwich" class="sezzwho.autowire.beans.Sandwich">
+		<constructor-arg  ref="mayo"/>
+		<constructor-arg  ref="meat"/>
+		<constructor-arg  ref="toastBread"/>
+	</bean>
+	
+	<bean id="mayo" class="sezzwho.autowire.beans.Mayo">
+	</bean>
+	
+	<bean id="meat" class="sezzwho.autowire.beans.Meat">
+		
+	</bean>
+	<bean id="toastBread" class="sezzwho.autowire.beans.ToastBread">
+		
+	</bean>
+
+</beans>
+
+

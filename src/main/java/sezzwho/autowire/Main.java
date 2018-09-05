@@ -1,10 +1,8 @@
 package sezzwho.autowire;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import configuration.AppConfig;
-import sezzwho.autowire.beans.Meat;
 import sezzwho.autowire.beans.Sandwich;
 
 
@@ -13,7 +11,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext context = new ClassPathXmlApplicationContext("config_bean.xml");
 		
 	
 		Sandwich s = context.getBean("sandwich", Sandwich.class);
